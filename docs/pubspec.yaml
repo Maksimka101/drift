@@ -29,6 +29,10 @@ dependencies:
   drift_flutter: ^0.2.0
 
 dev_dependencies:
+  # drift_dev is installed twice, once as a dependency and once as a dev_dependency
+  # This is necessary due to a bug in custom_lint that requires linters to be a dev_dependency
+  # PR: https://github.com/invertase/dart_custom_lint/pull/276
+  drift_dev: any
   build_runner: ^2.4.11
   build_verify: ^3.1.0
   lints: ^4.0.0
@@ -42,6 +46,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   webdev: ^3.6.0
+  custom_lint: ^0.6.7
 
 dependency_overrides:
   drift_flutter:
